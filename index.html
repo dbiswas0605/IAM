@@ -488,23 +488,19 @@
 
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
+    <script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
-    	<script>
-	
-            // Add "https://ipinfo.io" statement
-            // this will communicate with the ipify servers
-            // in order to retrieve the IP address
-            $.get("https://ipinfo.io", function(response) {
-                    //alert(JSON.stringify(response));
-                    $.post("https://fnntmlho32.execute-api.us-east-1.amazonaws.com/profile_tracker/capture-info", 
-                            JSON.stringify(response), 
-                            function(result){
-                            //alert(result);
-                        });
-                }, "json") 
-                // "json" shows that data will be fetched in json format
-            </script>
+        // Add "https://ipinfo.io" statement
+        // this will communicate with the ipify servers
+        // in order to retrieve the IP address
+        $.get("https://ipinfo.io", function(response) {
+                //alert(JSON.stringify(response));
+                $.post("https://fnntmlho32.execute-api.us-east-1.amazonaws.com/profile_tracker/capture-info", 
+                        JSON.stringify(response), 
+                        function(result){
+                        //alert(result);
+                    });
+            }, "json") 
+    </script>
 </body>
 </html>
